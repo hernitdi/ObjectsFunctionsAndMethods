@@ -5,8 +5,8 @@ This module lets you practice  ** using objects **, including:
   -- accessing their DATA via INSTANCE VARIABLES
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Darrian Herniter.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -14,7 +14,8 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-
+    two_circles()
+    circle_and_rectangle()
 
 def two_circles():
     """
@@ -33,6 +34,15 @@ def two_circles():
     # Put a statement in   main   to test this function
     #    (by calling this function).
     # ------------------------------------------------------------------
+    window = rg.RoseWindow()
+    delly = rg.SimpleTurtle()
+    delly.pen = rg.Pen('orange', 5)
+    delly.draw_circle(20)
+    delly.backward(40)
+    delly.begin_fill()
+    delly.draw_circle(10)
+    delly.end_fill()
+    window.close()
 
 
 def circle_and_rectangle():
@@ -75,6 +85,21 @@ def circle_and_rectangle():
     # IMPORTANT: Use the DOT TRICK to guess the names of the relevant
     #       instance variables for outline thickness, etc.
     # ------------------------------------------------------------------
+    new_window = rg.RoseWindow()
+    johnny = rg.SimpleTurtle()
+    johnny.paint_bucket = rg.PaintBucket('blue')
+    johnny.pen = rg.Pen('red', 5)
+    johnny.backward(40)
+    johnny.begin_fill()
+    johnny.draw_circle(40)
+    johnny.end_fill()
+    johnny.pen_up()
+    johnny.forward(50)
+    johnny.pen_down()
+    johnny.draw_square(40)
+    new_window.close_on_mouse_click()
+
+
 
 
 def lines():
